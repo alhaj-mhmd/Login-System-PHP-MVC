@@ -1,0 +1,6 @@
+#redirect to index.php in public file if the request url not include public word in it
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^$ public/ [L]
+  RewriteRule (.*) public/$1 [L]
+</IfModule>
